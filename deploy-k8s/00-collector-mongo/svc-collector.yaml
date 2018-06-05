@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    prometheus.io/path: /metrics
+    prometheus.io/port: "9104"
+    prometheus.io/scrape: "true"
+  namespace: platform
+  name: svc-mongo-collector-metrics
+  labels:
+    app: svc-mongo-collector-metrics
+    product: platform
+    process: web
+spec:
+  ports:
+  - port: 9104
+    protocol: TCP
+    targetPort: 9104
+  selector:
+    app: mongo-collector-metrics
+    product: platform
+    process: web
