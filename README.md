@@ -14,7 +14,7 @@ Based on MongoDB exporter for prometheus.io, written in go (https://github.com/d
 - MongoDB RocksDB storage-engine metrics (levels, compactions, cache usage, i/o rates, etc)
 - MongoDB WiredTiger storage-engine metrics (cache, blockmanger, tickets, etc)
 
-## Install 
+## How to Deploy
 
 We run Deploy in production of the mongo-collector-metrics application, as follows:
 
@@ -22,11 +22,12 @@ We run Deploy in production of the mongo-collector-metrics application, as follo
 
 `kubectl apply -f https://github.com/GrupoZapVivaReal/vivareal-graylog/tree/master/deploy-k8s/90-collector-mongo `
 
-After that, we access the link http://prometheus.private.prod.vivareal.io and run the following query `mongodb_mongod_connections`, then see the result below as evidence that the logs are being sent to prometheus:
+After that, we access the link http://prometheus.private.<env>.vivareal.io and run the following query `mongodb_mongod_connections`, then see the result below as evidence that the logs are being sent to prometheus:
 
-![captura de tela de 2018-05-17 14-01-31](https://user-images.githubusercontent.com/35613398/40192456-d553e1a4-59da-11e8-83ec-b4e148f895f1.png)
+![image](https://user-images.githubusercontent.com/28811010/41117258-e661e35e-6a62-11e8-9032-1b431a910a90.png)
 
 ## Usage
 
 Access Prometheus  QA or Prod interface and execute this command **mongodb_mongod** and select query you prefer.
-![captura de tela de 2018-06-06 15-48-30](https://user-images.githubusercontent.com/35613398/41058803-1d3f875e-69a1-11e8-8ab0-1c94c641c37f.png)
+![image](https://user-images.githubusercontent.com/28811010/41117209-bddb9c90-6a62-11e8-9173-ed09326afab5.png)
+
