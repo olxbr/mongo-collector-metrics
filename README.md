@@ -1,5 +1,5 @@
 # mongo-collector-metrics
-this repository was created for the mongodb metrics collector, this app sends metrics to the prometheus
+This repository was created for the mongodb metrics collector, this app sends metrics to the prometheus
 
 ## Mongodb Exporter
 
@@ -24,7 +24,7 @@ We run Deploy in production of the mongo-collector-metrics application, as follo
 
 After that, we access the link http://prometheus.private.<env>.vivareal.io and run the following query `mongodb_mongod_connections`, then see the result below as evidence that the logs are being sent to prometheus:
 
-![image](https://user-images.githubusercontent.com/28811010/41117258-e661e35e-6a62-11e8-9032-1b431a910a90.png)
+![image](https://user-images.githubusercontent.com/28811010/41121861-f557fe68-6a6f-11e8-968b-e1a85161510d.png)
 
 ## Usage
 
